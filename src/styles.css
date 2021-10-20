@@ -1,1 +1,5 @@
-/* You can add global styles to this file, and also import other style files */
+.footerCustom {
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+}

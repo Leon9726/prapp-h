@@ -1,0 +1,49 @@
+<div class="it-header-slim-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="it-header-slim-wrapper-content">
+          <h5 style="color: white;">{{ 'titolo' | translate }}</h5>
+          <div class="it-header-slim-right-zone">
+            <div class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle"
+                href="#"
+                data-toggle="dropdown"
+                aria-expanded="false">
+                <span>{{lang}}</span>
+                <svg class="icon d-none d-lg-block">
+                  <use
+                    xlink:href="./assets/bootstrap-italia/dist/svg/sprite.svg#it-expand"
+                  ></use>
+                </svg>
+              </a>
+              <div class="dropdown-menu">
+                <div class="row">
+                  <div class="col-12">
+                    <div class="link-list-wrapper">
+                      <ul class="link-list">
+                        <li *ngFor="let lingua of langs; let i=index;">
+                          <a class="list-item" (click)="useLanguage(lingua)"><span>{{lingua | uppercase}}</span></a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a href="login" class="btn btn-primary btn-icon btn-full">
+              <span class="rounded-icon">
+                <svg class="icon icon-primary">
+                  <use
+                    xlink:href="./assets/bootstrap-italia/dist/svg/sprite.svg#it-user"
+                  ></use>
+                </svg>
+              </span>
+              <span class="d-none d-lg-block">{{ 'accedi' | translate }}</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
