@@ -2,7 +2,6 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { ConfigService } from './config.service';
 import { map } from 'rxjs/operators';
-import { User } from '../model/user.model';
 
 @Injectable({
   providedIn: 'root'
@@ -28,15 +27,6 @@ export class AuthService {
         this.password = password;
         this.registerSuccessfulLogin(username, password);
       }));
-  }
-
-
-  registra(user:User) {
-    return this.http.post<User>(this.baseUrl + 'insertUsers', user);
-  }
-
-  utenti() {
-    return this.http.get(this.baseUrl + 'listUsers');
   }
 
   createBasicAuthToken(username: String, password: String) {

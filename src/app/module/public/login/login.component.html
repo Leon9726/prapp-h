@@ -8,22 +8,15 @@
           <br>
           <div class="form-group">
             <label for="email">User Name :</label>
-            <input type="text" class="form-control" id="username" [(ngModel)]="user.name"
-              name="username">
-          </div>
-          <div class="form-group">
-            <label for="email">Email :</label>
-            <input type="text" class="form-control" id="username" [(ngModel)]="user.email"
+            <input type="text" class="form-control" id="username" [(ngModel)]="username"
               name="username">
           </div>
           <div class="form-group">
             <label for="pwd">Password:</label>
-            <input type="password" class="form-control" [(ngModel)]="password" id="user.password"
+            <input type="password" class="form-control" [(ngModel)]="password" id="password"
               name="password">
           </div>
           <button (click)=handleLogin() class="btn btn-success">Login</button>
-          <button (click)=registra() class="btn btn-primary">Registra</button>
-          <button (click)=listaUtenti() class="btn btn-primary">Utenti</button>
         </form>
       </div>
     </div>
