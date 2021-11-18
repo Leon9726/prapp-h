@@ -29,6 +29,10 @@ export class AuthService {
       }));
   }
 
+  prova() {
+    return this.http.get(this.baseUrl+'prova');
+  }
+
   createBasicAuthToken(username: String, password: String) {
     return 'Basic ' + window.btoa(username + ":" + password)
   }

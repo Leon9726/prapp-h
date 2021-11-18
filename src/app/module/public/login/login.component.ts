@@ -38,4 +38,15 @@ export class LoginComponent implements OnInit {
     });      
   }
 
+  prova() {
+    this.authService.prova().subscribe((res) => {
+      this.invalidLogin = false;
+      this.loginSuccess = true;
+      this.successMessage = 'PROVA';
+    }, () => {
+      this.invalidLogin = true;
+      this.loginSuccess = false;
+    });        
+  }
+
 }
